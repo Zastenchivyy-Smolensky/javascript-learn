@@ -1,0 +1,114 @@
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.todoBox {
+  margin: 40px auto;
+  width: 800px;
+  min-height: 550px;
+  border: solid;
+  border-color: #707070;
+}
+
+.todoBox_header {
+  background-color: #7c7c7c;
+  height: 60px;
+  padding-left: 20px;
+}
+
+.todoBox_header h1 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 60px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.todoBox_main {
+  min-height: 400px;
+  padding: 10px 25px;
+}
+
+.todoBox_main h1 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.todoBox_list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todoBox_list li {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.todoDelete {
+  width: 80px;
+  height: 100%;
+  color: #ffffff;
+  background-color: #7a1710;
+  border: none;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.active-item {
+  color: #39813d;
+}
+
+.showMessage {
+  font-size: 20px;
+  padding: 0 25px;
+}
+
+#doneTask p {
+  color: #39813d;
+}
+
+#getError p {
+  color: #7a1710;
+}
+
+#doneEdit p {
+  color: #39813d;
+}
+
+#doneDelete p {
+  color: #39813d;
+}
+
+.todoBox_form {
+  padding: 0 25px;
+  margin-bottom: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputForm {
+  width: 84%;
+}
+
+.todoBox_form input {
+  padding: 0 0 0 20px;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.todoBox_form button {
+  width: 80px;
+  height: 100%;
+  color: #ffffff;
+  background-color: #39813d;
+  border: none;
+  font-size: 20px;
+}
+
+.hide {
+  display: none;
+}

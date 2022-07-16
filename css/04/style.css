@@ -1,0 +1,19 @@
+body,
+html {
+  padding: 35px;
+}
+.test {
+  width: 110px;
+  height: 110px;
+  margin: 60px;
+  background-color: aqua;
+  transition: transform 2s;
+  transform-origin: bottom left;
+  /* transition: transform 2s, background-color 2s; */
+  transition: all 2s;
+}
+
+.test:hover {
+  transform: rotate(90deg) translateX(80px);
+  background-color: blue;
+}

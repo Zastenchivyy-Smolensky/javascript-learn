@@ -1,0 +1,18 @@
+.test {
+  width: 160px;
+  height: 160px;
+  background-color: aqua;
+  animation: back 3s;
+}
+
+@keyframes back {
+  0% {
+    background-color: aqua;
+  }
+  50% {
+    background-color: brown;
+  }
+  100% {
+    background-color: blue;
+  }
+}

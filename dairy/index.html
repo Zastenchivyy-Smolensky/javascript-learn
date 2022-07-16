@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main6.js"></script>
+  </head>
+  <body>
+    <h1>日記帳</h1>
+    <div id="vard"></div>
+    <form>
+      タイトル:
+      <input
+        type="text"
+        name="dialyTitle"
+        id="dialyTitle"
+        placeholder="タイトルを入れてください"
+      />
+      <br />
+      日付:
+      <input type="text" name="dialyDate" id="dialyDate" /> <br />
+      <textarea
+        name="dialyContents"
+        id="dialyContents"
+        cols="30"
+        rows="5"
+        placeholder="メモしたい内容を入れてださい"
+      ></textarea>
+      <br />
+      <input type="button" value="保存する" id="saveButton" />
+      <input type="button" value="削除" id="deleteButton" />
+    </form>
+    <div id="status"></div>
+    <div id="list">日記リストを読み込んでいます</div>
+  </body>
+</html>

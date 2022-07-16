@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todoBox">
+        <div class="todoBox_header">
+          <h1>TODO</h1>
+        </div>
+        <div class="todoBox_main">
+          <h1>一覧</h1>
+          <div class="todoBox_list">
+            <ul id="todo-list">
+              <li class="todo-list-item">
+                <span>卵と牛乳を買いに行く</span>
+                <button class="todoDelete hide">削除</button>
+              </li>
+              <li class="todo-list-item">
+                <span>白髪染めをする</span>
+                <button class="todoDelete hide">削除</button>
+              </li>
+              <li class="todo-list-item">
+                <span>USJのチケットを予約する</span>
+                <button class="todoDelete hide">削除</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="showMessage">
+          <div id="doneTask" class="success hide">
+            <p>正常にタスクを追加しました</p>
+          </div>
+          <div id="getError" class="error hide">
+            <p>エラーが発生</p>
+          </div>
+          <div id="doneEdit" class="showEdit hide">
+            <p>タスクを編集しました</p>
+          </div>
+          <div id="doneDelete" class="showDelete hide">
+            <p>タスクを削除しました</p>
+          </div>
+        </div>
+        <div class="todoBox_form">
+          <div class="inputForm">
+            <input
+              type="text"
+              name="text-input"
+              id="text-input"
+              placeholder="タスクを入力してください"
+            />
+          </div>
+          <button id="add" onclick="newElement()">登録</button>
+          <button id="edit" class="hide" onclick="editElement()">編集</button>
+        </div>
+      </div>
+    </div>
+    <script src="style.js"></script>
+  </body>
+</html>

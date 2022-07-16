@@ -1,0 +1,54 @@
+.test1,
+.test2,
+.test3,
+.test4,
+.test5 {
+  height: 75px;
+  margin: 25px;
+  background-color: aqua;
+}
+.test1 {
+  width: 75px;
+  transition: width 2s;
+  transition-timing-function: ease;
+}
+.test2 {
+  width: 75px;
+  transition: width 2s;
+  transition-timing-function: ease-in;
+}
+.test3 {
+  width: 75px;
+  transition: width 2s;
+  transition-timing-function: ease-out;
+}
+.test4 {
+  width: 75px;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+}
+.test5 {
+  width: 75px;
+  transition: width 2s;
+}
+
+.test1:hover {
+  width: 250px;
+  transition: width 2s;
+}
+.test2:hover {
+  width: 250px;
+  transition: width 2s;
+}
+.test3:hover {
+  width: 250px;
+  transition: width 2s;
+}
+.test4:hover {
+  width: 250px;
+  transition: width 2s;
+}
+.test5:hover {
+  width: 250px;
+  transition: width 2s;
+}

@@ -1,0 +1,26 @@
+.test {
+  width: 160px;
+  height: 160px;
+  background-color: aqua;
+  animation: back 4s;
+  /* animation-delay: 2s; */
+  /* animation-timing-function: linear; */
+  /* animation-fill-mode: forwards; */
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes back {
+  0% {
+    width: 160px;
+    background-color: aqua;
+  }
+  50% {
+    width: 320px;
+    background-color: brown;
+  }
+  100% {
+    width: 320px;
+    background-color: blue;
+  }
+}

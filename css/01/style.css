@@ -1,0 +1,11 @@
+.test {
+  width: 240px;
+  height: 240px;
+  background-color: aqua;
+
+  transition: background-color 2s 1s;
+}
+
+.test:hover {
+  background-color: blue;
+}
