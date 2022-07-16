@@ -1,0 +1,20 @@
+.btn {
+  display: block;
+  width: 200px;
+  height: 60px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  margin: 25px auto;
+  background-color: red;
+}
+.btn01 {
+  box-sizing: border-box;
+  border: 2px solid red;
+}
+.btn01:hover {
+  background-color: skyblue;
+  border: 2px solid blue;
+  color: black;
+}
