@@ -1,12 +1,10 @@
 addEventListener("load", function () {
   generateList();
-  var now = new Date();
+  now = new Date();
   var y = now.getFullYear();
   var m = now.getMonth() + 1;
   var d = now.getDate();
-
   document.getElementById("dialyDate").value = y + "年" + m + "月" + d + "日";
-
   document.getElementById("saveButton").addEventListener("click", function () {
     const dialyTitle = document.getElementById("dialyTitle").value;
     const dialyContents = document.getElementById("dialyContents").value;
@@ -16,15 +14,30 @@ addEventListener("load", function () {
       contents: dialyContents,
     };
     localStorage.setItem(dialyDate, JSON.stringify(saveData));
-    document.getElementById("status").innerHTML = "保存しました";
+    document.getElementById("status").innerHTML = "成功しました";
     generateList();
   });
+  document
+    .getElementById("deleteButton")
+    .addEventListener("click", function () {
+      var dialyDate = document.getElementById("dialyDate").value;
+      if (localStorage.getItem(dialyDate) == null) {
+        alert("データがない");
+      } else {
+        if (confirm("データを本当に消しますか?")) {
+          localStorage.removeItem(dialyDate);
+          document.getElementById("status").innerHTML = "削除しました";
+          generateList();
+        }
+      }
+    });
 });
+
 function generateList() {
-  var data = window.localStorage;
-  var dialyDate = "";
+  var data = localStorage;
+  var dialyData = "";
   for (var i = 0; i < data.length; i++) {
-    dialyDate += data.key(i) + `\n`;
+    dialyData = data.key(i) + "\n";
   }
-  document.getElementById("list").innerHTML = dialyDate;
+  document.getElementById("list").innerHTML = dialyData;
 }
