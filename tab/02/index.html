@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>jQueryだけでタブ切り替えサンプル 2</title>
+    <style type="text/css">
+      /* タブっぽく並べて */
+      #tabs ul {
+        overflow: hidden;
+        height: 2em;
+        list-style: none;
+        border-bottom: 1px solid #cccccc;
+      }
+      #tabs li {
+        float: left;
+        display: inline;
+        margin-left: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        border-radius: 10px 10px 0 0;
+      }
+      /* 最初はパネルは非表示 */
+      #tabs .panel {
+        display: none;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(function () {
+        /**
+         * それぞれのタブをクリックしたとき開きたい要素がどれになるかはHTMLの方に書くようにしたので、Javascriptの方は1行でよい
+         * id="tabs"の中のhrefが#panel何々となっているa要素をクリックすると
+         * classがpanelとなっているdivを全部非表示にして、クリックしたタブのハッシュと同じIDの要素だけをフェードインして表示
+         * return false で onclick="return false" と同様にデフォルトのイベント処理は抑制
+         */
+        $('#tabs a[href^="#panel"]').click(function () {
+          $("#tabs .panel").hide();
+          $(this.hash).fadeIn();
+          return false;
+        });
+        //わざと1つ目を表示させておくことができます
+        $('#tabs a[href^="#panel"]:eq(0)').trigger("click");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>jQueryだけでタブ切り替えサンプル</h1>
+    <div id="tabs">
+      <ul>
+        <li><a href="#panel1">お知らせ</a></li>
+        <li><a href="#panel2">ご利用方法</a></li>
+        <li><a href="#panel3">利用規約</a></li>
+        <li><a href="mailto:test&#64;example.com">お問い合わせ</a></li>
+        <li><a href="#panel4">運営会社</a></li>
+      </ul>
+
+      <div id="panel1" class="panel">
+        <p>1つ目のタブの内容。</p>
+        <p>1つ目のタブの内容。</p>
+      </div>
+
+      <div id="panel2" class="panel">
+        <p>2つ目のタブの内容。</p>
+        <p>2つ目のタブの内容。</p>
+      </div>
+
+      <div id="panel3" class="panel">
+        <p>3つ目のタブの内容。</p>
+        <p>3つ目のタブの内容。</p>
+      </div>
+
+      <div id="panel4" class="panel">
+        <p>4つ目のタブの内容。</p>
+        <p>4つ目のタブの内容。</p>
+      </div>
+    </div>
+  </body>
+</html>

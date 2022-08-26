@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="tab_wrap">
+      <input id="tab1" type="radio" name="tab_btn" checked />
+      <input id="tab2" type="radio" name="tab_btn" />
+      <input id="tab3" type="radio" name="tab_btn" />
+
+      <div class="tab_area">
+        <label class="tab1_label" for="tab1">tab1</label>
+        <label class="tab2_label" for="tab2">tab2</label>
+        <label class="tab3_label" for="tab3">tab3</label>
+      </div>
+      <div class="panel_area">
+        <div id="panel1" class="tab_panel">
+          <p>panel1</p>
+        </div>
+        <div id="panel2" class="tab_panel">
+          <p>panel2</p>
+        </div>
+        <div id="panel3" class="tab_panel">
+          <p>panel3</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
