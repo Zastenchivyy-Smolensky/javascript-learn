@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+  </head>
+  <link rel="stylesheet" href="main.css" />
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1 class="title">商品一覧</h1>
+        <div class="search">
+          <div class="search_result">
+            検索結果 <span class="search_count">{{filtereadList.length}}</span>
+          </div>
+          <div class="search_condition">
+            <input type="checkbox" v-model="check1" />セール対象
+            <input type="checkbox" v-model="check2" />送料無料
+            <select class="search_order" v-model.number="order">
+              <option value="0">---並び替え---</option>
+              <option value="1">標準</option>
+              <option value="2">安い商品</option>
+            </select>
+          </div>
+        </div>
+        <div v-if="isError" class="error">{{message}}</div>
+        <div class="products">
+          <!-- id -->
+          <div
+            class="product"
+            v-for="(item, index) in filtereadList"
+            v-bind:id="index+1"
+            v-bind:key="index"
+          >
+            <div class="product_body">
+              <template v-if="item.isSale">
+                <div class="product_status">SALE</div>
+              </template>
+              <img class="product_image" v-bind:src="item.image" alt="" />
+            </div>
+            <div class="product_detail">
+              <div class="product_name" v-html="item.name">{{item.name}}</div>
+              <div class="product_price">
+                <span>{{$filters.number_format(item.price)}}</span>円(税込)
+              </div>
+              <template v-if="item.shipping === 0">
+                <div class="product_shipping">送料無料</div>
+              </template>
+              <template v-else>
+                <div class="product_shipping">
+                  +送料<span>{{$filters.number_format(item.shipping)}}</span>円
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="main1.js"></script>
+  </body>
+</html>
